@@ -28,7 +28,7 @@ jobs:
             docker rm myorderapp
           }
           else {
-            Write-Host "No existing container named 'myapp' found."
+            Write-Host "No existing container named 'myorderapp' found."
           }
 
       - name: Run Docker Container
