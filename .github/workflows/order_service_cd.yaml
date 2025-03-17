@@ -22,13 +22,13 @@ jobs:
       - name: Stop and Remove Existing Docker Container (Windows PowerShell)
         shell: powershell
         run: |
-          $container = docker ps -q -f "name=myapp"
+          $container = docker ps -q -f "name=myorderapp"
           if ($container) {
             docker stop myorderapp
             docker rm myorderapp
           }
           else {
-            Write-Host "No existing container named 'myapp' found."
+            Write-Host "No existing container named 'myorderapp' found."
           }
 
       - name: Run Docker Container
